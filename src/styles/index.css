@@ -1,0 +1,42 @@
+.hide_scrollbar::-webkit-scrollbar {
+	display: none;
+	-webkit-appearance: none;
+	width: 0;
+	height: 0;
+}
+
+.hide_scrollbar {
+	-ms-overflow-style: 'none'; /* IE and Edge */
+	scrollbar-width: 'none'; /* Firefox */
+}
+
+/* Customized scrollbar design for all elements */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/* For Firefox */
+.custom_scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}

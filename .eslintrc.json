@@ -1,0 +1,53 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "react-hooks",
+        "react-refresh",
+        "import"
+    ],
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react-refresh/only-export-components": [
+            "warn",
+            {
+                "allowConstantExport": true
+            }
+        ],
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin", // Node.js built-in modules
+                    "external", // NPM packages
+                    "internal", // Internal paths aliases
+                    [
+                        "parent",
+                        "sibling"
+                    ], // Parent and sibling directories
+                    "index", // Index files
+                    "object", // Object imports
+                    "type" // Type imports
+                ],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    },
+    "ignorePatterns": [
+        "dist/**/*"
+    ]
+}
